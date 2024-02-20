@@ -16,6 +16,7 @@ import { ToastContainer } from 'react-toastify';
 import Gallary from './pages/Gallary';
 import Photos from './pages/Photos';
 import Packages from './component/Packages';
+import Profile from './pages/Profile';
 const App = () => {
   return (
     <BrowserRouter>
@@ -23,7 +24,7 @@ const App = () => {
 
         <Navbar/>
         <Routes>
-        <Route exact path="/" element={<Home/>} />
+        <Route exact path="/" element={<Profile/>} />
         <Route path="/gallery" element={<Gallary/>} />
         
 
@@ -43,6 +44,13 @@ const App = () => {
           <ProtectedRoute>
 
         <CustomWedding/>
+          </ProtectedRoute>
+        
+        } />
+        <Route path="/my-profile" element={
+          <ProtectedRoute>
+
+        <Profile/>
           </ProtectedRoute>
         
         } />

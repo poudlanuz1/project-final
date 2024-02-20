@@ -12,7 +12,7 @@ export default function UserProvider({children}) {
     useEffect(()=>{
         const fetchData = async()=>{
             try{
-                const res = await baseApi.get("/admin/individual",{
+                const res = await baseApi.get("/user/individual",{
                     headers: { token: getToken() },
                 })
                 if(res.status===200){

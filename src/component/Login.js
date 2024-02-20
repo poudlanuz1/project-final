@@ -41,7 +41,7 @@ export default function Login() {
         e.preventDefault();
         if (loginInfo.email === "" || loginInfo.password === "") {
            
-            // return toast.error("fill the form please");
+            return toast.error("fill the form please");
         }
         try {
 
@@ -50,20 +50,20 @@ export default function Login() {
               password: loginInfo.password,
             });
             if (res.status === 200) {
-              
+              console.log("token--->",res.data.message);
               localStorage.setItem("token", res.data.message);
-            //   toast.success("Login Successfull");
-              navigate("/packages", { replace: true });
+              toast.success("Login Successfull");
               loginUser();
+              navigate("/packages", { replace: true });
             }
           } catch (err) {
-            // toast.error("LOGIN CREDENTIALS DID'NT MATCH");
+            toast.error("LOGIN CREDENTIALS DID'NT MATCH");
           }
     }
     const handleSignup=async(e)=>{
         e.preventDefault();
         if(!signinInfo.name||!signinInfo.email || !signinInfo.password){
-          // toast error
+          toast.error("please fill the form");
           return ;
         }
         try {
