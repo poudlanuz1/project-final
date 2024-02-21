@@ -395,6 +395,14 @@ body {
 
 /* PACKAGES */
 
+
+#wedding-packages-list ul li h1{
+  color: #fcd804;
+  margin: 1vw;
+  text-align: center;
+  font-weight: bolder;
+  font-size: larger;
+}
 #packages-list {
   margin: 2vh 10vw 0 10vw;
   padding: 2vw;

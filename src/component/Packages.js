@@ -55,20 +55,22 @@ export default function Packages() {
             <li>Highlight Video</li>
             <li>Full Video</li>
             <li>Softcopy Photos (64gb)</li>
+            <li><h1>RS.40000</h1></li>
           </ul>
-          <button type="submit">SELECT DATE</button>
+          <button type="submit">BUY NOW</button>
         </div>
         <div id="standard">
           <h2>WEDDING STANDARD</h2>
           <img src={display}></img>
           <ul>
-            <li>200 printed photos with album</li>
+            <li>300 printed photos with album</li>
             <li>15" by 21" Frame</li>
             <li>Highlight Video</li>
             <li>Full Video</li>
             <li>Softcopy Photos (64gb)</li>
+            <li><h1>RS.55000</h1></li>
           </ul>
-          <button type="submit">SELECT DATE</button>
+          <button type="submit">BUY NOW</button>
         </div>
         <div id="premium">
           <h2>WEDDING PREMIUM</h2>
@@ -79,8 +81,9 @@ export default function Packages() {
             <li>Highlight Video</li>
             <li>Full Video</li>
             <li>Softcopy Photos (64gb)</li>
+            <li><h1>RS.70000</h1></li>
           </ul>
-          <button type="submit">SELECT DATE</button>
+          <button type="submit">BUY NOW</button>
         </div>
       </div>
       <div id="custom-packages-list">

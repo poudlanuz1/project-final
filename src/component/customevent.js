@@ -22,7 +22,7 @@ export default function customevent() {
             </li>
             <li>
             <label htmlFor="numofphoto">Number of Photos:</label>
-                <input type="number" name="numofphoto" min='6' max='500' required /> 
+                <input type="number" name="numofphoto" min='6' max='300' required /> 
             </li>
             <li>
             <label htmlFor="location">Location:</label>
@@ -45,12 +45,14 @@ export default function customevent() {
                 <textarea id="additionalmessage" name="message" rows="3" placeholder='Write a message'></textarea>
             </li>
             <li>
-            <button type='submit'>SEND<FaArrowRight></FaArrowRight></button>
+            <button type='submit'>BUY PACKAGE</button>
             </li>
           </ul>
         </form>
       </div>
-
+      <div id="pricing-box">
+        Rs.<input type='text'></input>
+      </div>
     </div>
   )
 }

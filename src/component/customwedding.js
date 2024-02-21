@@ -48,7 +48,7 @@ export default function customwedding() {
                 <textarea id="additionalmessage" name="message" rows="4" placeholder='Write a Message'></textarea>
                 </li>
                 <li>
-                    <button type='submit'>SEND</button>
+                    <button type='submit'>BUY PACKAGE</button>
                 </li>
             </ul>
         </form>
