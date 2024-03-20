@@ -1,5 +1,5 @@
 import React from 'react'
-import display from '../images/display.jpg';
+import display from '../images/display.jpeg';
 
 
 export default function home() {

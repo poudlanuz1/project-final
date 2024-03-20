@@ -2,7 +2,11 @@
   font-family: 'TolyerNo3-Regular';
   margin: 0;
   padding: 0;
+
 }
+
+@import 'react-toastify/dist/ReactToastify.css';
+
 
 body {
   background-color: #efeded;
@@ -698,6 +702,14 @@ body {
   padding: 0 25vw 0 25vw;
 }
 
+#form-wedding h2, #form-event h2 {
+  margin-top: 1vw;
+  color: #fcd804;
+  text-align: center;
+  font-size: 2.5vw;
+  font-weight: bolder;
+}
+
 #form-event h1 , #form-wedding h1{
   font-size: 50px;
   text-align: center;
@@ -771,6 +783,8 @@ body {
 }
 
 #profile {
+  margin-top: 4vw;
+  margin-bottom: 2vw;
   z-index:-99;
   display: flex;
   align-items: center;
@@ -943,4 +957,268 @@ body {
 }
 
 
+/*  for videos */
+.video{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.video .title{
+  font-size: 2vw;
+  font-weight: 500;
+}
+#videos{
+  width: 100%;
+  height:100vh;
+  padding:2vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 
+}
+#videos .video-card{
+  border-radius: 1vw;
+  overflow: hidden;
+  width: 30%;
+  height:20vw;
+}
+#videos .video-card .iframe{
+  height: 100%;
+  width: 100%;
+}
+
+/* MY PROFILE */
+
+#packages-list #profile img {
+  margin-top: 0.8vw;
+  height: 5%;
+  width: 5%;
+  aspect-ratio: 1/1;
+  border-radius: 80%;
+}
+
+#profile {
+  z-index:-99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 0.8vw;
+}
+
+#profile .dropbtn {
+  margin-bottom: 0.2vw;
+  background-color: #efeded;
+  font-size: 2vw;
+  border: none;
+  color: black;
+}
+
+#profile .dropbtn:hover {
+  background-color: #efeded;
+  text-decoration: underline;
+}
+
+#profile .dropdown-content {
+  font-size: larger;
+  min-width: 10vw;
+  background-color: #353535;
+}
+
+#profile .dropdown-content:hover {
+  color: #fcd804;
+}
+
+
+
+
+
+
+
+
+.click{
+  width: 100vw;
+  height:100vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+#gallary{
+  padding:2vw 0 2vw 0;
+  text-align: center;
+  font-size: 3vw;
+  font-weight: 500;
+}
+#all-category{
+  margin-top: 2vw;
+  max-width: 100vw;
+  display: grid;
+  gap: 1vw;
+  grid-template-columns: repeat(3, .5fr);
+}
+#gallary .category{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#gallary .category .img{
+  overflow: hidden;
+  border-radius: 1vw;
+  width: 20vw;
+  height:20vw;
+}
+#gallary .category .img img{
+  cursor: pointer;
+  height:100%;
+  width: 100%;
+  object-fit: cover;
+  transition: all ease-in 0.3s;
+}
+#gallary .category .img:hover img{
+  transform: scale(1.2);
+  opacity: 0.8;
+}
+#gallary.category .category-title{
+  font-size: 1.5vw;
+  font-weight: 500;
+}
+
+
+.photo-container{
+  padding:2vw 0vw 2vw 0vw;
+  display: flex;
+  justify-content: space-evenly;
+}
+.col{
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+.col img{
+  width: 100%;
+  margin-bottom: 1vw;
+  border-radius: 1vw;
+}
+
+
+/*  for profile page */
+
+#profile-page{
+
+  width: 100%;
+  height: 70vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#profile-page .profile-container{
+  padding: 5vw 0vw 3vw 0vw;
+  position: relative;
+  height: 100%;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+}
+#profile-page .edit{
+  color: white;
+  font-size:1.3vw;
+  font-weight: 500;
+  position: absolute;
+  top:1vw;
+  padding:0.5vw;
+  background-color: #0e8040;
+  right:1vw;
+  border-radius: 1vw;
+  transform: translate(-50%,50%);
+}
+#profile-page .delete{
+  font-size:1.3vw;
+  font-weight: 500;
+  position: absolute;
+  top:1vw;
+  left:1vw;
+  padding:0.5vw;
+  color: white;
+  background-color: #0e8040;
+  border-radius: 1vw;
+  transform: translate(50%,50%);
+}
+
+#profile-page .delete:hover{
+  background-color: #034c23;
+}
+
+#profile-page .edit:hover {
+  background-color: #034c23;
+}
+
+#profile-page .profile-container form{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 4vw;
+  font-size: 1.5vw;
+}
+#profile-page .profile-container form .image{
+  margin-bottom: 3vw;
+  position: relative;
+}
+#profile-page .profile-container form .image .img{
+  width: 10vw;
+  height:10vw;
+  border-radius: 50%;
+  overflow: hidden;
+}
+#profile-page .profile-container form .image .img img{
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+#profile-page .profile-container form .image .photo-icon{
+  height: 2.5vw;
+  width: 2.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom:0;
+  right:0;
+  background-color: white;
+  opacity: 0.5;
+  transform: translate(-10%,-10%);
+  border-radius: 50%;
+  cursor: pointer;
+}
+#profile-page .profile-container form .image .photo-icon label{
+  cursor: pointer;
+}
+#profile-page .profile-container form .image .photo-icon #image-input{
+  visibility: hidden;
+  display: none;
+}
+#profile-page .profile-container form .textbox{
+  width: 50vw;
+}
+#profile-page .profile-container form .textbox input{
+  border-bottom: 1px solid black;
+  background-color: transparent;
+  width: 100%;
+  padding-top:1vw;
+  outline: none;
+}
+#profile-page .profile-container form .submit{
+  font-weight: 400;
+  padding: 0.5vw 0.8vw;
+  border: solid #0e8040;
+  background-color: #0e8040;
+  color: white;
+  border-radius: 0.8vw;
+  cursor: pointer;
+}
+
+#profile-page .profile-container form .submit:hover{
+  background-color: #034c23;
+}

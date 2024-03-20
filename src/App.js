@@ -5,11 +5,11 @@ import Home from './component/home';
 import { BrowserRouter, Route,Routes } from 'react-router-dom';
 import Contact from './component/Contact';
 import About from './component/about';
-import Videos from './component/videos';
+import Videos from './component/Videos';
 import ProtectedRoute from './component/ProtectedRoutes';
 import Login from './component/Login';
-import CustomWedding from './component/customwedding';
-import CustomEvents from './component/customevent';
+import CustomWedding from './component/CustomWedding';
+import CustomEvent from './component/CustomEvent';
 import UserProvider from './component/Providers/UserProvider';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
@@ -24,7 +24,7 @@ const App = () => {
 
         <Navbar/>
         <Routes>
-        <Route exact path="/" element={<Profile/>} />
+        <Route exact path="/" element={<Home/>} />
         <Route path="/gallery" element={<Gallary/>} />
         
 
@@ -57,7 +57,7 @@ const App = () => {
         <Route path="/packages/custom/events" element={
         <ProtectedRoute>
 
-        <CustomEvents/>
+        <CustomEvent/>
         </ProtectedRoute>
       } 
         />

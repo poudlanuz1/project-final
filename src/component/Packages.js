@@ -1,11 +1,21 @@
 import React, { useContext, useEffect, useState } from "react";
-import display from "../images/display.jpg";
+import display from "../images/display.jpeg";
+import premium from "../images/premium.jpeg";
 import { Link, useNavigate } from "react-router-dom";
 import baseApi from "./utils/baseApi";
 import getToken from "./utils/getToken";
 import { UserContext } from "./Providers/UserProvider";
+import { toast } from "react-toastify";
 
 export default function Packages() {
+
+  const errorCustom = ()=> {
+    toast.warning("Payment Portal Integrating Soon !!!")
+}
+const preventDefault = (e)=>{
+  e.preventDefault();
+}
+
   const [data, setData] = useState({});
   const navigate = useNavigate();
   const { logoutUser } = useContext(UserContext);
@@ -36,7 +46,7 @@ export default function Packages() {
   return (
     <div id="packages-list">
       <div id="profile">
-        <img src={display} alt="pp"></img>
+        <img src={data.imageUrl} alt="pp"></img>
         <div class="dropdown">
           <button class="dropbtn">{data.name}</button>
           <div class="dropdown-content">
@@ -48,7 +58,7 @@ export default function Packages() {
       <div id="wedding-packages-list">
         <div id="basic">
           <h2> WEDDING BASIC</h2>
-          <img src={display}></img>
+          <img src={premium}></img>
           <ul>
             <li>100 printed photos with album</li>
             <li>15" by 21" Frame</li>
@@ -57,11 +67,11 @@ export default function Packages() {
             <li>Softcopy Photos (64gb)</li>
             <li><h1>RS.40000</h1></li>
           </ul>
-          <button type="submit">BUY NOW</button>
+          <button type="submit" onClick={errorCustom}>BUY NOW</button>
         </div>
         <div id="standard">
           <h2>WEDDING STANDARD</h2>
-          <img src={display}></img>
+          <img src={premium}></img>
           <ul>
             <li>300 printed photos with album</li>
             <li>15" by 21" Frame</li>
@@ -70,20 +80,20 @@ export default function Packages() {
             <li>Softcopy Photos (64gb)</li>
             <li><h1>RS.55000</h1></li>
           </ul>
-          <button type="submit">BUY NOW</button>
+          <button type="submit" onClick={errorCustom}>BUY NOW</button>
         </div>
         <div id="premium">
           <h2>WEDDING PREMIUM</h2>
-          <img src={display}></img>
+          <img src={premium}></img>
           <ul>
             <li>Karizma Album</li>
             <li>15" by 21" Frame</li>
             <li>Highlight Video</li>
             <li>Full Video</li>
-            <li>Softcopy Photos (64gb)</li>
+            <li>Softcopy Photos (128gb)</li>
             <li><h1>RS.70000</h1></li>
           </ul>
-          <button type="submit">BUY NOW</button>
+          <button type="submit" onClick={errorCustom}>BUY NOW</button>
         </div>
       </div>
       <div id="custom-packages-list">

@@ -1,11 +1,29 @@
-import React from 'react'
-import { FaArrowRight } from 'react-icons/fa';
+import React, { useEffect, useState } from 'react'
+import { toast } from 'react-toastify';
 
-export default function customevent() {
+export default function CustomEvent() {
+
+  const [location, setLocation] = useState(0);
+  const [timeline, setTimeline] = useState(0);
+  const [service, setService] = useState(0);
+  const [total, setTotal] = useState(0);
+
+  const errorCustom = ()=> {
+      toast.warning("Payment Portal Integrating Soon !!!")
+  }
+  const preventDefault = (e)=>{
+    e.preventDefault();
+}
+
+  // Function to update total whenever any state changes
+  useEffect(() => {
+      setTotal(location + timeline + service );
+  }, [location, timeline, service]);
+
   return (
     <div id='event-custom-form'>
       <div id='form-event'>
-        <form>
+        <form onSubmit={preventDefault}>
           <ul>
             <li>
             <h1>CUSTOMIZE YOUR EVENTS WITH US</h1>
@@ -26,32 +44,31 @@ export default function customevent() {
             </li>
             <li>
             <label htmlFor="location">Location:</label>
-            <input type="radio" name="location"  checked/> Indoor
-                <input type="radio" name="location"  /> Outdoor
+            <input type="radio" name="location"  onChange={() => setLocation(5000)}/> Indoor
+                <input type="radio" name="location" onChange={() => setLocation(10000)} /> Outdoor
             </li>
             <li>
             <label htmlFor="time">Timeline:</label>
-            <input type="radio" name="timeline"  /> Half Day
-                <input type="radio" name="timeline"  checked/> Full Day
+            <input type="radio" name="timeline" onChange={() => setTimeline(5000)} /> Half Day
+                <input type="radio" name="timeline" onChange={() => setTimeline(10000)} /> Full Day
             </li>
             <li>
             <label htmlFor="service">Service:</label>
-            <input type="radio" name="service"  checked/> Photography
-                <input type="radio" name="service"  /> Videography
-                <input type="radio" name="service"  /> Both
+            <input type="radio" name="service" onChange={() => setService(5000)} /> Photography
+                <input type="radio" name="service" onChange={() => setService(10000)} /> Videography
+                <input type="radio" name="service" onChange={() => setService(13000)} /> Both
             </li>
             <li>
-            <label htmlFor="additionalmessage">Additional Message (optional):</label>
-                <textarea id="additionalmessage" name="message" rows="3" placeholder='Write a message'></textarea>
+            <label htmlFor="additionalmessage">Note: Cannot be refunded if booked.</label>
             </li>
             <li>
-            <button type='submit'>BUY PACKAGE</button>
+                <h2>RS.{total}</h2>
+            </li>
+            <li>
+                <button type='submit' onClick={errorCustom}>BUY PACKAGE</button>
             </li>
           </ul>
         </form>
-      </div>
-      <div id="pricing-box">
-        Rs.<input type='text'></input>
       </div>
     </div>
   )
